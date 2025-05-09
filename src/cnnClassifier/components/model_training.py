@@ -9,6 +9,7 @@ class Training:
     
     def get_base_model(self):
         self.model=tf.keras.models.load_model(self.config.updated_base_model_path)
+        # self.model=tf.keras.models.load_model(self.config.secondary_updated_base_model_path)
     
     def traing_valid_generator(self):
 
@@ -37,3 +38,4 @@ class Training:
                        validation_steps=self.validation_steps, validation_data=self.valid_generator)
 
         self.save_model(path=self.config.trained_model_path, model=self.model)
+        self.save_model(path=self.config.secondary_trained_model_path, model=self.model)

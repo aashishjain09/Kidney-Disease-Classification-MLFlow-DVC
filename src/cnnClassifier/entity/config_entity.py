@@ -14,7 +14,9 @@ class DataIngestionConfig:
 class PrepareBaseModelConfig:
     root_dir: Path
     base_model_path: Path
+    secondary_base_model_path: Path  # OUTSIDE ARTIFACTS
     updated_base_model_path: Path
+    secondary_updated_base_model_path: Path  # OUTSIDE ARTIFACTS
     params_image_size: list
     params_learning_rate: float
     params_include_top: bool
@@ -26,7 +28,9 @@ class PrepareBaseModelConfig:
 class TrainingConfig:
     root_dir: Path
     trained_model_path: Path
+    secondary_trained_model_path: Path  # OUTSIDE ARTIFACTS
     updated_base_model_path: Path
+    secondary_updated_base_model_path: Path  # OUTSIDE ARTIFACTS
     training_data: Path
     params_epochs: int
     params_batch_size: int
