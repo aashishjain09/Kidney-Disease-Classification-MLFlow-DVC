@@ -49,7 +49,19 @@ except Exception as e:
 
 # COMMANDS TO PUT IN CMD PROMPT OF THE FOLDER AFTER ADDING DVC AND MODEL
 """
-    FIRST DELETE ARTIFACTS if you are running first time
+    - FIRST DELETE ARTIFACTS if you are running for first time
+    
     dvc init
     dvc repro
+    
+    - To see the pipeline graph
+    
+    dvc dag
+
+    - After saving the evaluation into MLFlow (DAGS) and restarting a session | Session = new terminal + new evaluation
+
+    export MLFLOW_TRACKING_URI = ""
+    export MLFLOW_TRACKING_USERNAME = ""
+    export MLFLOW_TRACKING_PASSWORD = ""
+
 """
