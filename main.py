@@ -46,3 +46,10 @@ try:
 except Exception as e:
     logger.exception(e)
     raise e
+
+# COMMANDS TO PUT IN CMD PROMPT OF THE FOLDER AFTER ADDING DVC AND MODEL
+"""
+    FIRST DELETE ARTIFACTS if you are running first time
+    dvc init
+    dvc repro
+"""
