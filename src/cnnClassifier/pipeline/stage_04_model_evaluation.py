@@ -9,10 +9,10 @@ class EvaluationPipeline:
         pass
 
     def main(self):
-        training=Evaluation(ConfigurationManager().get_training_config())
-        training.get_base_model()
-        training.traing_valid_generator()
-        training.train()
+        evaluation = Evaluation(ConfigurationManager().get_evaluation_config())
+        evaluation.evaluation()
+        evaluation.save_score()
+        # evaluation.log_into_mlflow()  # Uncomment only for HyperParameter Tuning
 
 
 if __name__ == "__main__":
